@@ -22,6 +22,12 @@ public class ItemController {
     @Autowired
     private ItemServiceImpl itemServiceImpl;
 
+    /**
+     * 保存商品类目的功能
+     * @param desc
+     * @param item
+     * @return
+     */
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<Void> saveItem(@RequestParam("desc") String desc, Item item) {
         try {
